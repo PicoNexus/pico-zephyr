@@ -1,0 +1,21 @@
+# Copyright (c) 2024 32bitmicro https://www.32bitmicro.com
+# SPDX-License-Identifier: Apache-2.0
+
+manifest:
+  defaults:
+    remote: zephyr-rtos-fork
+
+  remotes:
+    - name: zephyr-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: zephyr-rtos-fork
+      url-base: https://github.com/32bitmicro
+
+  projects:
+    - name: zephyr
+      repo-path: zephyr
+      revision: v3.6.0
+      import:
+        name-allowlist:
+          - cmsis
+          - hal_rpi_pico
